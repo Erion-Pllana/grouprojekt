@@ -1,0 +1,125 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #222;
+  }
+  
+  body.dark-mode .navbar a {
+    color: #bbb;
+  }
+  
+  body.dark-mode .navbar a:hover {
+    background-color: #444;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Main content styles */
+  .hero {
+    text-align: center;
+    margin: 40px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  .games, .reviews, .about, .tips {
+    margin: 40px;
+    text-align: center;
+  }
+  
+  .game-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .game {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .game img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .review, .tip {
+    margin: 20px 0;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+  
