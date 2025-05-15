@@ -1,35 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Reviews - Game Hub</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>DarkZone Gaming Reviews</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
+ <!-- Navbar -->
   <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="main.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="reina.html">Reviews</a></li>
       <li><a href="tips.html">Tips</a></li>
+      <li><button onclick="showFeaturedGames()">Check Out Featured Games</button></li>
     </ul>
   </nav>
 
-  <!-- Reviews Content -->
-  <section class="reviews">
-    <h1>Game Reviews</h1>
-    <div class="review">
-      <h3>Game 1 Review</h3>
-      <p>Here is a detailed review of Game 1...</p>
-    </div>
-    <div class="review">
-      <h3>Game 2 Review</h3>
-      <p>Here is a detailed review of Game 2...</p>
-    </div>
-  </section>
 
-  <script src="script.js"></script>
+    <audio id="entranceSound" preload="auto">
+    <source src="https://www.soundjay.com/button/sounds/button-6.mp3" type="audio/mpeg">
+    </audio>
+    <div id="helloMessage" style="font-size: 24px; font-weight: bold; color: #ffcc00; text-align: center; margin-top: 20px;">
+    </div>
+
+<!-- Page Content -->
+<div class="container">
+
+
+    <div class="game-review">
+        <h2>Cyberpunk 2077</h2>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077">
+        <p><strong>Cyberpunk 2077</strong> is a story-driven RPG set in a futuristic world full of choices, cyber-enhancements, and narrative depth. Explore Night City as V, a mercenary on the rise.</p>
+        <table>
+            <tr><th>Platform</th><td>PC, PS5, Xbox Series X</td></tr>
+            <tr><th>Genre</th><td>RPG / Open World</td></tr>
+            <tr><th>Rating</th><td>8.5 / 10</td></tr>
+            <tr><th>Developer</th><td>CD Projekt Red</td></tr>
+        </table>
+        <button onclick="highlight(this)">Highlight</button>
+    </div>
+
+    <div class="game-review">
+        <h2>Elden Ring</h2>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring">
+        <p><strong>Elden Ring</strong> offers deep exploration, punishing combat, and a massive open world filled with lore and mystery. FromSoftware's masterpiece is a must-play.</p>
+        <table>
+            <tr><th>Platform</th><td>PC, PS5, Xbox Series X</td></tr>
+            <tr><th>Genre</th><td>Action RPG</td></tr>
+            <tr><th>Rating</th><td>9.7 / 10</td></tr>
+            <tr><th>Developer</th><td>FromSoftware</td></tr>
+        </table>
+        <button onclick="highlight(this)">Highlight</button>
+    </div>
+
+        <div class="game-review">
+        <h2>God of War: Ragnarok</h2>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg" alt="God of War: Ragnarok">
+        <p><strong>God of War: Ragnarok</strong> continues the story of Kratos and Atreus in the Nine Realms. With epic combat and Norse mythology, it's one of the best narrative-driven games out there.</p>
+        <table>
+            <tr><th>Platform</th><td>PS5, PS4</td></tr>
+            <tr><th>Genre</th><td>Action Adventure</td></tr>
+            <tr><th>Rating</th><td>9.5 / 10</td></tr>
+            <tr><th>Developer</th><td>Santa Monica Studio</td></tr>
+        </table>
+        <button onclick="highlight(this)">Highlight</button>
+    </div>
+
+    <div class="game-review">
+        <h2>Hogwarts Legacy</h2>
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg" alt="Hogwarts Legacy">
+        <p><strong>Hogwarts Legacy</strong> lets you live your dream of attending Hogwarts as a custom student in the 1800s. Explore the magical world, learn spells, and shape your destiny in this open-world RPG.</p>
+        <table>
+            <tr><th>Platform</th><td>PC, PS5, Xbox Series X, Switch</td></tr>
+            <tr><th>Genre</th><td>Open World RPG</td></tr>
+            <tr><th>Rating</th><td>8.8 / 10</td></tr>
+            <tr><th>Developer</th><td>Portkey Games</td></tr>
+        </table>
+        <button onclick="highlight(this)">Highlight</button>
+    </div>
+ 
+    <div class="game-review">
+    <h2>Barbie Dreamhouse Adventures</h2>
+    <img src="barbie.png">
+    <p><strong>Barbie Dreamhouse Adventures</strong> is a fun simulation game where players can design rooms, cook, dance, and live out fabulous adventures in Barbie's stylish dreamhouse. Perfect for younger audiences and Barbie fans!</p>
+    <table>
+        <tr><th>Platform</th><td>iOS, Android</td></tr>
+        <tr><th>Genre</th><td>Simulation / Casual</td></tr>
+        <tr><th>Rating</th><td>7.9 / 10</td></tr>
+        <tr><th>Developer</th><td>Budge Studios</td></tr>
+    </table>
+    <button onclick="highlight(this)">Highlight</button>
+</div>
+
+<div class="game-review">
+    <h2>Granny</h2>
+    <img src="granny.png">
+    <p><strong>Granny</strong> is a first-person survival horror game where you’re trapped in a creepy house and must escape before a terrifying old woman finds you. Stealth, puzzle-solving, and fear are your only tools in this indie classic.</p>
+    <table>
+        <tr><th>Platform</th><td>iOS, Android, PC</td></tr>
+        <tr><th>Genre</th><td>Horror / Puzzle</td></tr>
+        <tr><th>Rating</th><td>8.1 / 10</td></tr>
+        <tr><th>Developer</th><td>DVloper</td></tr>
+    </table>
+    <button onclick="highlight(this)">Highlight</button>
+
+    <button onclick="surpriseMe()" style="margin-bottom: 20px;">🎲 Surprise Me!</button>
+    <audio id="surpriseSound" preload="auto">
+    <source src="https://www.bensound.com/bensound-music/bensound-epic.mp3" type="audio/mpeg">
+  </audio>
+    <div class="like-button">
+    <button onclick="likeGame(this)">❤️ Like (<span class="like-count">0</span>)</button>
+    </div>
+
+    <script src="reina.js"></script>
+</div>
+</div>
 </body>
 </html>
