@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  a{
+    color: white;
+    font-family: 'Radio Canada';
+    text-decoration: none;
+  }
+  
+  .containerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    color: white;
+  
+    width: 506px;
+    height: 30px;
+  
+    position: absolute;
+    left: 51%;
+    top: 7%;
+  }
+  
+  
+  #searchbar {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #5D9D0B;
+    color: white;
+  }
+  
+  
+  #list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .animals {
+    font-size: 1.2em;
+    padding: 15px;
+    animation: fadeIn 0.5s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .animals:last-child {
+    border-bottom: none;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  
+  
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+  }
+  
+  nav > ul,
+  nav > ul > li {
+    outline: 0;
+  }
+  
+  nav > ul > li > a {
+   text-decoration: none;
+  }
+  
+  body {
+    min-height: 100vh;
+   
+  }
+  
+  /* MAIN MENU */
+  
+  .main-menu {
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    overflow:hidden;
+    background: #0009;
+    transition: width .05s linear;
+    -webkit-transition: width .05s linear;
+    z-index: 10;
+    padding-top: 10px;
+  }
+  
+  .main-menu:hover {
+    width: 180px;
+    overflow:visible;
+  }
+  
+  .main-menu > ul > li {
+    position: relative;
+    display: block;
+    width: 180px;
+  }
+  
+  .main-menu > ul > li > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:#999;
+    font-size: 1rem;
+    transition:all .1s linear;
+    -webkit-transition:all .1s linear;
+    padding: 10px 0;
+  }
+  
+  .nav-icon {
+    width: 60px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .nav-text {
+    width: 120px;
+    height: 20px;
+    font-family: "Mulish", sans-serif;
+  }
+  
+  .logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .main-menu li:hover > a, .main-menu li.active > a, .main-menu li > a:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(29, 79, 215, 0.7);
+  }
+  
+  /* ANIMATED BACKGROUND */
+  
+  .container {
+      background:#1F2024;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blob-c {
+      min-height: 100vh;
+      overflow: hidden;
+      position:absolute;
+      width: 100%;
+      filter: blur(40px);
+  /*   background: rgba(255,255,255,0.1) */
+  }
+  
+  .shape-blob {
+      background:#000;
+      height: 60px;
+      width: 80px;
+      border-radius: 40% 50% 30% 40%;
+        animation: 
+          transform 18s ease-in-out infinite both alternate,
+          movement_one 12s ease-in-out infinite both;
+      opacity:.7;
+      position: absolute;
+      left: 75%;
+      top: 40%;
+  }
+  .shape-blob.one{
+      background:#0085FF;
+      height: 150px;
+      width: 200px;
+      left: 10px;
+      top: 10px;
+      transform: rotate(-180deg);
+      animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+  }
+  
+  .shape-blob.six{
+      background:#0EAFFF;
+      height: 70px;
+      width: 100px;
+      left: 160px;
+      top: 200px;
+      transform: rotate(-180deg);
+      animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+  }
+  
+  .shape-blob.four{
+      background:#4EAEFF;
+      height: 100px;
+      width: 80px;
+      left: 350px;
+      top: 60px;
+      transform: rotate(-180deg);
+      animation: transform 17s ease-in-out infinite both alternate, movement_two 13s ease-in-out infinite both;
+  }
+  
+  .shape-blob.five{
+      background:#0085FF;
+      height: 100px;
+      width: 80px;
+      left: 480px;
+      top: 30px;
+      transform: rotate(-180deg);
+      animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+  }
+  
+  .shape-blob.two{
+      background:#4EAEFF;
+      height: 150px;
+      width: 150px;
+      left: 600px;
+      top: 150px;
+      transform: rotate(-180deg);
+      animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+  }
+  
+  .shape-blob.three{
+      background:#0EAFFF;
+      height: 150px;
+      width: 150px;
+      left: 800px;
+      top: 30px;
+      transform: rotate(-180deg);
+      animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+  }
+  
+  @keyframes transform
+  {
+      0%,
+    100% { border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%; } 
+     20% { border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%; } 
+     40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%; } 
+     60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%; } 
+     80% { border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%; } 
+  }
+  
+  @keyframes movement_one
+  {
+      0%,
+    100% { transform: none; }
+     50% { transform: translate(50%, 20%) rotateY(10deg) scale(1); }
+  }
+  
+  @keyframes movement_two
+  {
+      0%,
+    500% { transform: none; }
+     50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.3);}
+  }
+  
+  body{
+      background-color: #00050a;
+  }
+  
+  
+  
+  .Header1{
+      position: absolute;
+      left: 300px;
+      top: 10px;
+  }
+  .logo{
+      position: absolute;
+      width: 90px;
+      height: 195.99px;
+  
+      left: 90%;
+  }
+  .logo:hover{
+    position: absolute;
+    width: 90px;
+    height: 195.99px;
+    opacity: 0.5;
+
+    left: 90%;
+}
+  /* text web */
+  .name-web{
+      position: absolute;
+      width: 157px;
+      height: 38px;
+      left: 120px;
+      top: 50px;
+  
+      font-family: 'Radio Canada';
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 38px;
+      
+      color: #ffff;
+  
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .background{
+    background-color: #00050a;
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 600px;
+    height: 4000px;
+    z-index: 1;
+  }
+
+
+  .game-name{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .game-name:hover{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    opacity: 0.5;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .game-rate{
+    position: absolute;
+    left: 10%;
+    top: 18%;
+    color: white;
+  }
+  .game-rate{
+    position: absolute;
+    left: 10%;
+    top: 18%;
+    color: white;
+    opacity: 0.5;
+  }
+  .game-rate2{
+    position: absolute;
+    left: 19%;
+    top: 18.3%;
+    color: white;
+  }
+  .game-rate2{
+    position: absolute;
+    left: 19%;
+    top: 18.3%;
+    color: white;
+    opacity: 0.5;
+  }
+
+  .game-image{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 1200px;
+    height: 600px;
+    z-index: 2;
+    border-radius: 20px;
+  }
+  .game-image:hover{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 1200px;
+    height: 600px;
+    z-index: 2;
+    border-radius: 20px;
+
+    opacity: 0.5;
+  }
+  .game-logo{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 250px;
+    height: 75px;
+    z-index:2;
+  }
+  .game-logo:hover{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 250px;
+    height: 75px;
+    z-index:2;
+    opacity: 0.5;
+  }
+   .game-logoo{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 280px;
+    height: 95px;
+    z-index:2;
+  }
+  .game-logo0:hover{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    width: 280px;
+    height: 95px;
+    z-index:2;
+    opacity: 0.5;
+  }
+  .game-logooo{
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    width: 280px;
+    height: 155px;
+    z-index:2;
+  }
+  .game-logooo:hover{
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    width: 280px;
+    height: 155px;
+    z-index:2;
+    opacity: 0.5;
+  }
+  .game-logoooo{
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    width: 280px;
+    height: 205px;
+    z-index:2;
+  }
+  .game-logoooo:hover{
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    width: 280px;
+    height: 205px;
+    z-index:2;
+    opacity: 0.5;
+  }
+  .game-base{
+    position: absolute;
+    left: 78%;
+    top: 55%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 38px;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: gray;
+    padding: 0px 10px 0 10px;
+    text-align: center;
+  }
+
+   .game-base:hover{
+    position: absolute;
+    left: 78%;
+    top: 55%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 38px;
+    opacity: 0.5;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: gray;
+    padding: 0px 10px 0 10px;
+    text-align: center;
+  }
+
+  .game-price{
+    position: absolute;
+    left: 78%;
+    top: 60%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 38px;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .game-price:hover{
+    position: absolute;
+    left: 78%;
+    top: 60%;
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 38px;
+    opacity: 0.5;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+
+
+  .game-buy{
+    position: absolute;
+    left: 78%;
+    top: 68%;
+    width: 350px;
+    height: 50px;
+
+    border: 1px solid #5D9D0B;
+    background-color: #5D9D0B;
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .game-buy:hover{
+    position: absolute;
+    left: 78%;
+    top: 68%;
+    width: 350px;
+    height: 50px;
+
+    border: 1px solid #5D9D0B;
+    background-color: #5D9D0B;
+    text-align: center;
+    opacity: 0.5;
+
+    color: white;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  .game-add{
+    position: absolute;
+    left: 78%;
+    top: 76%;
+    width: 350px;
+    height: 50px;
+
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  .game-add:hover{
+    position: absolute;
+    left: 78%;
+    top: 76%;
+    width: 350px;
+    height: 50px;
+
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+    opacity: 0.5;
+
+    color: white;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .game-text{
+    position: absolute;
+    left: 11.5%;
+    top: 102%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+   
+    
+    text-align: center;
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .game-text:hover{
+    position: absolute;
+    left: 11.5%;
+    top: 102%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+   
+    
+    text-align: center;
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .semrush-details{
+    position: absolute;
+    left: 78%;
+    top: 87%;
+    font-family: 'Radio Canada';
+    font-size: 15px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .semrush-details:hover{
+    position: absolute;
+    left: 78%;
+    top: 87%;
+    font-family: 'Radio Canada';
+    font-size: 15px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+   
+    
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+
+  .remrush-claim{
+    position: absolute;
+    left: 90%;
+    top: 87%;
+    font-family: 'Radio Canada';
+    font-size: 15px;
+    line-height: 38px;
+    z-index: 2;
+    text-align: end;
+ 
+   
+    
+    
+    color: #5D9D0B;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .remrush-claim:hover{
+    position: absolute;
+    left: 90%;
+    top: 87%;
+    font-family: 'Radio Canada';
+    font-size: 15px;
+    line-height: 38px;
+    z-index: 2;
+    text-align: end;
+    opacity: 0.5;
+ 
+   
+    
+    
+    color: #5D9D0B;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .Genres{
+    position: absolute;
+    left: 10%;
+    top: 130%;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    text-decoration: underline;
+    
+  }
+
+  .Genres:hover{
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  span{
+    color: gray;
+    text-decoration: underline gray;
+  }
+  span:hover{
+    text-decoration: none;
+    opacity: 0.5;
+  }
+ 
+
+  .Features{
+    position: absolute;
+    left: 40%;
+    top: 130%;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    text-decoration: underline;
+  }
+  .Features:hover{
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+
+.big-rate{
+  position: absolute;
+    left: 40%;
+    top: 145%;
+    font-family: 'Radio Canada';
+    font-size: 70px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+  }
+  .big-rate:hover{
+    position: absolute;
+      left: 40%;
+      top: 145%;
+      font-family: 'Radio Canada';
+      font-size: 70px;
+      line-height: 38px;
+      z-index: 2;
+      opacity: 0.5;
+      
+     
+      color: #ffff;
+  
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  
+    }
+
+
+  .Sytem-requirements{
+    position: absolute;
+    left: 10%;
+    top: 170%;
+    font-family: 'Radio Canada';
+    font-size: 30px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .Sytem-requirements:hover{
+    position: absolute;
+    left: 10%;
+    top: 170%;
+    font-family: 'Radio Canada';
+    font-size: 30px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .minimum{
+    position: absolute;
+    left: 10%;
+    top: 190%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+  .minimum:hover{
+    position: absolute;
+    left: 10%;
+    top: 190%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+  h2{
+    color: gray;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  h2:hover{
+    color: white;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  h1{
+    color: white;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+  .minimumm{
+    color: white;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .minimumm:hover{
+    color: white;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+    
+   
+    color: gray;
+  
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .Recomanded{
+    position: absolute;
+    left: 65%;
+    top: 190%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: end;
+
+  }
+
+  .Recomanded:hover{
+    position: absolute;
+    left: 65%;
+    top: 190%;
+
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    opacity: 0.5;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: end;
+
+  }
+  
+
+
+ .minimummm{
+    color: white;
+    font-family: 'Radio Canada';
+    font-size: 20px;
+    line-height: 38px;
+    z-index: 2;
+    
+   
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+ .minimummm:hover{
+  color: white;
+  font-family: 'Radio Canada';
+  font-size: 20px;
+  line-height: 38px;
+  z-index: 2;
+  
+ 
+  color: gray;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

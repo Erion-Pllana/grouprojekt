@@ -1,0 +1,2004 @@
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+}
+
+nav > ul,
+nav > ul > li {
+  outline: 0;
+}
+
+nav > ul > li > a {
+ text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+ 
+}
+
+/* MAIN MENU */
+
+
+/* side bar menu */
+.main-menu {
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  overflow:hidden;
+  background: #0009;
+  transition: width .05s linear;
+  -webkit-transition: width .05s linear;
+  z-index: 10;
+  padding-top: 10px;
+}
+
+.main-menu:hover {
+  width: 180px;
+  overflow:visible;
+}
+
+.main-menu > ul > li {
+  position: relative;
+  display: block;
+  width: 180px;
+}
+
+.main-menu > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:#999;
+  font-size: 1rem;
+  transition:all .1s linear;
+  -webkit-transition:all .1s linear;
+  padding: 10px 0;
+}
+
+.nav-icon {
+  width: 60px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  width: 120px;
+  height: 20px;
+  font-family: "Mulish", sans-serif;
+}
+
+.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.main-menu li:hover > a, .main-menu li.active > a, .main-menu li > a:focus {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(29, 79, 215, 0.7);
+}
+
+/* perfundimi i side bar menu */
+
+/* ANIMATED BACKGROUND */
+/* snow animacion */
+.container {
+	background:#1F2024;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blob-c {
+	min-height: 100vh;
+	overflow: hidden;
+	position:absolute;
+	width: 100%;
+	filter: blur(40px);
+/*   background: rgba(255,255,255,0.1) */
+}
+
+.shape-blob {
+	background:#000;
+	height: 60px;
+	width: 80px;
+	border-radius: 40% 50% 30% 40%;
+  /* animcaioni i bores per me ra ne menyre posht per 18 sekonda  */
+  	animation: 
+		transform 18s ease-in-out infinite both alternate,
+		movement_one 12s ease-in-out infinite both;
+	opacity:.7;
+	position: absolute;
+	left: 75%;
+	top: 40%;
+}
+.shape-blob.one{
+	background:#0085FF;
+	height: 150px;
+	width: 200px;
+	left: 10px;
+	top: 10px;
+	transform: rotate(-180deg);
+	animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+}
+
+.shape-blob.six{
+	background:#0EAFFF;
+	height: 70px;
+	width: 100px;
+	left: 160px;
+	top: 200px;
+	transform: rotate(-180deg);
+	animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+}
+
+.shape-blob.four{
+	background:#4EAEFF;
+	height: 100px;
+	width: 80px;
+	left: 350px;
+	top: 60px;
+	transform: rotate(-180deg);
+	animation: transform 17s ease-in-out infinite both alternate, movement_two 13s ease-in-out infinite both;
+}
+
+.shape-blob.five{
+	background:#0085FF;
+	height: 100px;
+	width: 80px;
+	left: 480px;
+	top: 30px;
+	transform: rotate(-180deg);
+	animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+}
+
+.shape-blob.two{
+	background:#4EAEFF;
+	height: 150px;
+	width: 150px;
+	left: 600px;
+	top: 150px;
+	transform: rotate(-180deg);
+	animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+}
+
+.shape-blob.three{
+	background:#0EAFFF;
+	height: 150px;
+	width: 150px;
+	left: 800px;
+	top: 30px;
+	transform: rotate(-180deg);
+	animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+}
+
+@keyframes transform
+{
+    0%,
+  100% { border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%; } 
+   20% { border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%; } 
+   40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%; } 
+   60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%; } 
+   80% { border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%; } 
+}
+
+@keyframes movement_one
+{
+    0%,
+  100% { transform: none; }
+   50% { transform: translate(50%, 20%) rotateY(10deg) scale(1); }
+}
+
+@keyframes movement_two
+{
+    0%,
+  500% { transform: none; }
+   50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.3);}
+}
+
+/* snow */
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	
+	color: #000;
+}
+
+.snow_wrap{
+	height: 100vh;
+	width: 100%;
+	background:url('../images/pic.jpg');
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: relative;
+}
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: 
+  radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+  radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+  radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+	margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
+}
+/* background color */
+
+.background{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+
+}
+
+body{
+    background-color: #00050a;
+}
+/* logo */
+
+.Header1{
+    position: absolute;
+    left: 300px;
+    top: 10px;
+}
+.logo{
+    position: absolute;
+    width: 90px;
+    height: 195.99px;
+}
+/* text web */
+.name-web{
+    position: absolute;
+    width: 157px;
+    height: 38px;
+    left: 120px;
+    top: 50px;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    
+    color: #ffff;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Download{
+    position: absolute;
+width: 860px;
+height: 231px;
+
+right:960px;
+top: 200px;
+
+
+font-family: 'Radio Canada';
+font-style: normal;
+font-weight: 700;
+font-size: 59px;
+line-height: 77px;
+text-align: center;
+
+color: #5D9D0B;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.Onthis{
+    position: absolute;
+    right:1070px;
+    top: 350px;
+
+    color:  #ffff;
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 77px;
+    text-align: center;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Your{
+    position: absolute;
+    right:970px;
+    top: 270px;
+
+    color:  #ffff;
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 77px;
+    text-align: center;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.spancolor{
+    color:  #ffff;
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 77px;
+    text-align: center;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.small-text{
+    position: absolute;
+    right:955px;
+    top: 460px;
+
+    color:  #ffff;
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 77px;
+    text-align: center;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* laptop */
+.Phone{
+    position: absolute;
+    width: 810px;
+    height: 513px;
+
+    left: 900px;
+    top: 200px;
+    z-index: -1;
+    
+}
+
+.semrush-phone{
+    position: absolute;
+    left:1370px;
+    top: 370px;
+    rotate: 3deg;
+
+    font-family: 'Radio Canada';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 38px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* buttons */
+
+.button{
+    background-color:#fff ;
+    border-radius: 20px;
+    color: #5D9D0B;
+    border: 2px solid #ffff;
+
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    left: 377px;
+    top: 573px;
+
+    font-family: 'Radio Canada';
+  font-weight: 400;
+  font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+
+}
+.line1{
+    position: absolute;
+    width: 430px;
+    height: 6px;
+    left: 377px;
+    top: 804px;
+    
+    background: #ffff;
+    color: #1B1D24;
+}
+
+.line2{
+    position: absolute;
+    width: 430px;
+    height: 6px;
+    left: 1077px;
+    top: 804px;
+    
+    background: #ffff;
+    color: #1B1D24;
+}
+/* logos trusted */
+
+.trusted{
+    position: absolute;
+    width: 246px;
+    height: 29px;
+    left: 825px;
+    top: 777px;
+    
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    
+    text-align: center;
+    
+    color: #ffff;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) 
+}
+
+.tesla{
+    
+position: absolute;
+width: 93px;
+height: 93px;
+
+top: 850px;
+left: 400px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.walmart{
+    
+position: absolute;
+width: 93px;
+height: 93px;
+
+top: 850px;
+left: 650px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.nike{
+    
+position: absolute;
+width: 93px;
+height: 93px;
+
+top: 850px;
+left: 900px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.Youtube{
+    
+position: absolute;
+width: 93px;
+
+top: 850px;
+left: 1150px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.addidas{
+
+position: absolute;
+width: 93px;
+height: 93px;
+
+top: 850px;
+left: 1400px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.menu{
+    position: absolute;
+width: 53px;
+height: 53px;
+
+top: 70px;
+left: 1700px;
+
+background: url(image.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.textt{
+    position: absolute;
+width: 1562px;
+height: 154px;
+
+top: 1100px;
+left: 160px;
+
+font-family: 'Radio Canada';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+
+color: #ffff;
+}
+
+/* system to play semrush */
+
+.system{
+    position: absolute;
+    top: 1250px;
+    left: 200px;
+    width: 10000px;
+}
+.img-system{
+    position: absolute;
+    width:162px ;
+    height: 193px;
+    left: 150px;
+    top: 250px;
+
+}
+.text-system{
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    
+    text-align: center;
+    
+    color: #ffff;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+
+    position: absolute;
+    left: 100px;
+    top: 450px;
+}
+
+
+
+.faqs{
+    position: absolute;
+    top: 1250px;
+    left: 160px;
+    width: 10000px;
+}
+.img-faqs{
+    position: absolute;
+    width:162px ;
+    height: 193px;
+    left: 680px;
+    top: 250px;
+
+}
+
+.text-faqs{
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    
+    text-align: center;
+    
+    color: #ffff;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+
+    position: absolute;
+    left: 730px;
+    top: 450px;
+}
+
+
+.server{
+    position: absolute;
+    top: 1250px;
+    left: 700px;
+    width: 10000px;
+}
+
+.img-server{
+    position: absolute;
+    width:162px ;
+    height: 193px;
+    left: 680px;
+    top: 250px;
+
+}
+
+.text-server{
+    font-family: 'Radio Canada';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    
+    text-align: center;
+    
+    color: #ffff;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+
+    position: absolute;
+    left: 690px;
+    top: 450px;
+}
+
+
+/* recommadned games */
+
+body{
+	margin: 0;
+	
+	color: white;
+	font-family: sans-serif;;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+.slider{width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 250%;}
+.slider input{display: none;}
+.testimonials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+	overflow: hidden;
+}
+.testimonials .item{
+	width: 300px;
+	padding: 30px;
+	border-radius: 5px;
+	background-color: #21262d;
+	position: absolute;
+	border:3px solid white;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	user-select: none;
+	cursor: pointer;
+}
+.testimonials .item h1{font-size: 114px; color: white;}
+.dots{display: flex; justify-content: center;align-items: center;}
+.dots label{
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #413B52;
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"]{
+	transform: scale(2);
+	background-color: #fff;
+	box-shadow: 0px 0px 0px 3px #dddddd24;
+}
+
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"]{
+	transform: scale(1.5);
+}
+
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"],
+#t-4:checked ~ .testimonials label[for="t-1"],
+#t-5:checked ~ .testimonials label[for="t-2"]{
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"],
+#t-5:checked ~ .testimonials label[for="t-1"]{
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-1:checked ~ .testimonials label[for="t-5"]{
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-5"],
+#t-1:checked ~ .testimonials label[for="t-4"]{
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+	
+}
+
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"]{
+	
+	z-index: 4;
+}
+
+
+.shop{
+    position: absolute;
+    left: 20%;
+    top: 210%;
+    color: #5D9D0B;
+    font-size: 60px;
+    font-family: "Brush Script MT", cursive;
+    font-weight: 700;
+    z-index: 2;
+}
+.our{
+    position: absolute;
+    left: 20%;
+    top: 212%;
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+.Game{
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 293px;
+  height: 343px;
+}
+
+.show{
+  position: absolute;
+    left: 43%;
+    top: 217%;
+    color: #5D9D0B;
+    font-size: 60px;
+    font-family: "Brush Script MT", cursive;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* devices to play semrush */
+
+.text-devices{
+  position: absolute;
+top: 320%;
+left: 25%;
+
+
+font-family: 'Radio Canada';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+
+color: #ffff;
+}
+
+
+.windows{
+  position: absolute;
+  top: 340%;
+  left: 25%;
+  width: 10000px;
+}
+.img-windows{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 25%;
+  top: 365%;
+}
+.img-ios{
+  
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 45%;
+    top: 365%;
+  
+}
+.img-linux{
+  position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 65%;
+    top: 365%;
+}
+
+.text-windows{
+  position: absolute;
+  left: 27%;
+  top: 389%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+.text-ios{
+  position: absolute;
+  left: 49%;
+  top: 389%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+.text-linux{
+  position: absolute;
+  left: 69%;
+  top: 389%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+
+
+
+/* social media */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrappper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  color: #5D9D0B;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrappper .button:hover{
+  width: 200px;
+}
+.wrappper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrappper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrappper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrappper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrappper .button:nth-child(4):hover .icon{
+  background: #ff0000;
+}
+.wrappper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrappper .button:hover .icon i{
+  color: #fff;
+}
+.wrapppr .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrappper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrappper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrappper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrappper .button:nth-child(4) span{
+  color: #ff0000;
+}
+
+.FACEBOOK{
+  position: absolute;
+  top: 27%;
+  left: 88%;
+}
+.TWITTER{
+  position: absolute;
+  top: 38%;
+  left: 88%;
+}
+
+.INSTAGRAM{
+  position: absolute;
+  top: 49%;
+  left: 88%;
+}
+
+.YOUTUBE{
+  position: absolute;
+  top: 60%;
+  left: 88%;
+}
+/* slider games  */
+/* levizja e lojrave ne te gjith faqen  */
+
+:root {
+  --color-text: #000;
+  --colog-bg: #000;
+  
+  --size: clamp(10rem, 1rem + 40vmin, 30rem);
+  --gap: calc(var(--size) / 14);
+  --duration: 60s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+.marquee_group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll-x var(--duration) linear infinite;
+}
+.marquee-reverse .marquee_group {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+/* tek aniacioni qe fillom dhe perfundon ne fund te faqes eshte i bere permes keyframes i cili me ka mundesar
+te e beje nje levizje nga fillimi deri  ne fund te faqes po ashtu tek rreshti i dyte nga fundi tek fillimi i ifaqes  */
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+    /* animacioni nga fillimi tek fundi i faqes  */
+    }
+  to {
+    transform: translateX(var(--scroll-end));
+    /* animacioni nga fundi i faqes tek fillimi i faqes  */
+  }
+}
+
+.marquee .fa {
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  fill: var(--color-text);
+  
+  aspect-ratio: 19/9;
+  padding: calc(var(--size) / 10);
+  border-radius: 0.5rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: auto;
+  max-width: 100vw;
+
+  position: absolute;
+  top: 430%;
+}
+
+.covers{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.oGames{
+  position: absolute;
+  left: 20%;
+  top: 410%;
+  color: #5D9D0B;
+  font-size: 60px;
+  font-family: "Brush Script MT", cursive;
+  font-weight: 700;
+  z-index: 2;
+
+}
+.insemrush{
+  position: absolute;
+  left: 20%;
+  top: 412%;
+  color: white;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+
+.devices-to-play{
+  position: absolute;
+top: 510%;
+left: 25%;
+
+
+font-family: 'Radio Canada';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+
+color: #ffff;
+}
+
+/* devices to play semrush */
+
+.img-xbox{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 25%;
+  top: 555%;
+}
+.img-pc{
+  
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 45%;
+    top: 555%;
+  
+}
+.img-ps{
+  position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 65%;
+    top: 555%;
+}
+
+.text-xbox{
+  position: absolute;
+  left: 28%;
+  top: 579%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+.text-pc{
+  position: absolute;
+  left: 49%;
+  top: 579%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+.text-ps{
+  position: absolute;
+  left: 67%;
+  top: 579%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* gamepass */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+:root{
+--border-radius-size: 14px;
+--barbarian: #EC9B3B;
+--archer: #EE5487;
+--giant: #F6901A;
+--goblin: #82BB30;
+--wizard: #4FACFF;
+--colorsecret : #5D9D0B ;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+
+
+.Wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20%;
+  top: 610%;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  
+}
+
+.WWrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 40%;
+  top: 610%;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  
+}
+
+
+.wwrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 60%;
+  top: 610%;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  
+}
+
+
+
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: var(--border-radius-size) + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  border-radius: 20px;
+
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: var(--border-radius-size) ;
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.clash-card__image--barbarian {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 400px;
+    position: absolute;    
+    top: -65px;
+    left: -70px;
+  }
+}
+
+.clash-card__image--goblin {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg');
+  img {
+    width: 370px;
+    position: absolute;    
+    top: -21px;
+    left: -37px;
+  }
+}
+
+.clash-card__image--giant {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg');
+  img {
+    width: 340px;
+    position: absolute;    
+    top: -30px;
+    left: -25px;
+  }
+}
+
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: var(--barbarian);
+}
+
+.clash-card__level--goblin {
+  color: var(--goblin);
+}
+
+.clash-card__level--giant {
+  color: var(--giant);
+}
+
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;  
+  color: black;
+}
+
+.clash-card__unit-stats--barbarian {
+  background: var(--colorsecret);
+  
+  .one-third {
+     border-right: 1px solid #5D9D0B;
+  }
+}
+
+.clash-card__unit-stats--archer {
+  background: var(--archer);
+  
+  .one-third {
+     border-right: 1px solid #5D9D0B;
+  }
+}
+
+.clash-card__unit-stats--giant {
+  background: var(--colorsecret);
+  
+  .one-third {
+     border-right: 1px solid darken(var(--colorsecret), 8%);
+  }
+}
+
+
+
+
+
+.clash-card__unit-stats {
+  
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  
+  .one-third {
+    width: 33%;
+    float: left;
+    padding: 20px 15px;
+  }
+  
+  sup {
+    position: absolute;
+    bottom: 4px; 
+    font-size: 45%;
+    margin-left: 2px;
+  }
+  
+  .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .no-border {
+    border-right: none;
+  }
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+
+.paid-memeber{
+  position: absolute;
+  left: 33%;
+  top: 675%;
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 77px;
+  text-align: center;
+
+  color: #ffff;
+}
+
+/* benefits gamepass */
+
+.img-fps{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 25%;
+  top: 700%;
+}
+.img-servers{
+  
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 45%;
+    top: 700%;
+  
+}
+.img-graphics{
+  position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 65%;
+    top: 700%;
+}
+
+.text-fps{
+  position: absolute;
+  left: 24%;
+  top: 729%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+.text-servers{
+  position: absolute;
+  left: 46%;
+  top: 729%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+.text-graphics{
+  position: absolute;
+  left: 64.5%;
+  top: 729%;
+
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  
+  text-align: center;
+  
+  color: #ffff;
+  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+/* movei and song gamepass */
+
+
+.Movie-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 53%;
+  top: 780%;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  
+}
+
+.Movie-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: var(--border-radius-size) + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  border-radius: 20px;
+
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+
+.Movie__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: var(--border-radius-size) ;
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.Movie__image--leonardo {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 350px;
+    position: relative;    
+    top: -39px;
+    left: -20px;
+  }
+}
+
+.Movie__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: black;
+}
+
+.Movie__level--Leonardo {
+  color: black;
+}
+
+
+.Movie__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.Movie__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;  
+  color: black;
+}
+
+.Movie__unit-stats--leonardo {
+  background-color: #5D9D0B;
+  
+  .one-third {
+     border-right: 1px solid #5D9D0B;
+  }
+}
+
+
+
+
+
+
+.Movie__unit-stats {
+  
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  
+  .one-third {
+    width: 33%;
+    float: left;
+    padding: 20px 15px;
+  }
+  
+  sup {
+    position: absolute;
+    bottom: 4px; 
+    font-size: 45%;
+    margin-left: 2px;
+  }
+  
+  .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .no-border {
+    border-right: none;
+  }
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+.Download-Movie-Song{
+  position: absolute;
+  left: 28%;
+  top: 760%;
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 77px;
+  text-align: center;
+
+  color: #ffff;
+}
+
+
+
+.Song-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+  left: 28%;
+  top: 780%;
+  
+  &:focus {
+    outline: 0;
+  }
+
+  
+}
+
+.Song-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: var(--border-radius-size) + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  border-radius: 20px;
+
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+
+.Song__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: var(--border-radius-size) ;
+  border-top-right-radius: var(--border-radius-size);
+}
+
+.Song__image--eminem {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 500px;
+    position: relative;    
+    top: -51px;
+    left: -110px;
+  }
+}
+
+.Song__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: black;
+}
+
+.Song__level--eminem {
+  color: black;
+}
+
+
+.Song__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.Song__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;  
+  color: black;
+}
+
+.Song__unit-stats--eminem {
+  background-color: #5D9D0B;
+  
+  .one-third {
+     border-right: 1px solid #5D9D0B;
+  }
+}
+
+.Song__unit-stats {
+  
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: var(--border-radius-size);
+  border-bottom-right-radius: var(--border-radius-size);
+  
+  .one-third {
+    width: 33%;
+    float: left;
+    padding: 20px 15px;
+  }
+  
+  sup {
+    position: absolute;
+    bottom: 4px; 
+    font-size: 45%;
+    margin-left: 2px;
+  }
+  
+  .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .no-border {
+    border-right: none;
+  }
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/* download semrush  */
+
+.download{
+  position: absolute;
+  left: 17.5%;
+  top: 860%;
+
+  width: 700px;
+}
+
+
+.favorite{
+  position: absolute;
+  left: 50%;
+  top: 875%;
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  
+
+  color: #ffff;
+}
+
+.save{
+  position: absolute;
+  left: 50%;
+  top: 890%;
+
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-size: 20px;
+  
+  
+
+  color: #ffff;
+}
+
+
+/* footer */
+
+
+.footer{
+  position: absolute;
+  left: 0%;
+  top: 930%;
+  width: 100%;
+  height: 350px;
+  background-color: black;
+}
+
+
+.footer-name{
+  position: absolute;
+  left: 45%;
+  top: 5%;
+  letter-spacing: 10px;
+}
+
+.footer-text{
+  position: absolute;
+  left: 33%;
+  top: 20%;
+  font-family: 'Radio Canada';
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  
+}
+
+.footer-img{
+  width: 30px;
+}
+
+.facebookk{
+  position: absolute;
+  left: 40.5%;
+  top: 51%;
+}
+
+.twitterr{
+  position: absolute;
+  left: 46.5%;
+  top: 51%;
+}
+.youtubee{
+  position: absolute;
+  left: 51.5%;
+  top: 51%;
+}
+.instagramm{
+  position: absolute;
+  left: 57%;
+  top: 51%;
+}
+
+.end-footer{
+  position: absolute;
+  left: 0px;
+  bottom: 0%;
+  background-color: #00050a ;
+  width: 100%;
+  height: 60px;
+}
