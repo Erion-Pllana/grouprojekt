@@ -2,32 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DarkZone Gaming Reviews</title>
-    <link href="style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rein S(Z)emrushi</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- logoja ntab  -->
+    <link rel="shortcut icon" href="../IMG/images-removebg-preview (2).png" type="image/x-icon">
+
+    <!-- fontet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- linkat e bootstrap -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Radio+Canada:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+
+    <!-- fontet  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+
 </head>
+ 
 <body>
- <!-- Navbar -->
-  <nav class="navbar">
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <ul>
-      <li><a href="main.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="reina.html">Reviews</a></li>
-      <li><a href="tips.html">Tips</a></li>
-      <li><button onclick="showFeaturedGames()">Check Out Featured Games</button></li>
-    </ul>
-  </nav>
+
+  
+       <!-- sidebar menu -->
+
+    <script src="../HOMEPAGE/script.js"></script>
+    
+    <!-- Navbar -->
+  <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="../HOMEPAGE/index.html">
+            <i class="fa fa-home nav-icon"></i>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../STORE PAGE/index.html">
+            <i class="fa fa-dollar-sign nav-icon"></i>
+            <span class="nav-text">Store</span>
+          </a>
+        </li>
+
+       
+
+        <li>
+          <a href="../UPCOMING/index.html">
+            <i class="fa fa-user-secret nav-icon"></i>
+            <span class="nav-text">Upcoming</span>
+          </a>
+        </li>
 
 
-    <audio id="entranceSound" preload="auto">
-    <source src="https://www.soundjay.com/button/sounds/button-6.mp3" type="audio/mpeg">
-    </audio>
-    <div id="helloMessage" style="font-size: 24px; font-weight: bold; color: #ffcc00; text-align: center; margin-top: 20px;">
-    </div>
+        <li>
+          <a href="../test/reina.html">
+            <i class="fa fa-heart nav-icon"></i>
+            <span class="nav-text">Reina</span>
+          </a>
+        </li>
+
+        <br>
+        <br>
+        <br>
+
+
+        <li>
+          <a href="../LOGIN/index.html">
+            <i class="fa  nav-icon"></i>
+            <span class="nav-text">Sign Up</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../LOGOUT/index.html">
+            <i class="fa fa-right-from-bracket nav-icon"></i>
+            <span class="nav-text">
+Sign In</span>
+          </a>
+        </li>  
+      </ul>
+   </nav>
 
 <!-- Page Content -->
 <div class="container">
@@ -110,15 +174,13 @@
     </table>
     <button onclick="highlight(this)">Highlight</button>
 
-    <button onclick="surpriseMe()" style="margin-bottom: 20px;">🎲 Surprise Me!</button>
-    <audio id="surpriseSound" preload="auto">
-    <source src="https://www.bensound.com/bensound-music/bensound-epic.mp3" type="audio/mpeg">
-  </audio>
+  <button onclick="playFart()">💨 Click for Fart</button>
+
+  <audio id="fartSound" src="https://www.youtube.com/watch?v=ZKacHpM8yTc"></audio>
+
     <div class="like-button">
     <button onclick="likeGame(this)">❤️ Like (<span class="like-count">0</span>)</button>
     </div>
-
-    <script src="reina.js"></script>
 </div>
 </div>
 </body>
