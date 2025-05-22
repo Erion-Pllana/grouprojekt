@@ -31,61 +31,93 @@
 
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+<nav class="navbar">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul>
+    <li><a href="../HOMEPAGE/index.html">Home</a></li>
+    <li><a href="../STORE PAGE/index.html">Store</a></li>
+    <li><a href="../UPCOMING/index.html">Upcoming</a></li>
+    <li>
+      <a href="About Us/about.html">About Us</a>
+      <span class="nav-text"></span>
+    </li>
+    <li><button onclick="showFeaturedGames()">Check Out Featured Games</button></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Welcome to Game Hub</h1>
+  <p>Your ultimate destination for the latest news, reviews, and tips in the gaming world. Stay updated with all things gaming.</p>
+</section>
+
+<!-- About Content -->
+<section class="about">
+  <h2>About Game Hub</h2>
+  <p>At Game Hub, we’re more than just a gaming platform. We’re a community. A gathering place for all gamers, from the casual player to the competitive eSports enthusiast. Whether you’re looking for the latest updates on AAA games, tips to help you conquer that final boss, or reviews to guide your next big gaming purchase, we’ve got you covered!</p>
+  
+  <p>Our mission is simple: <strong>To bring gamers together.</strong> Through insightful articles, expert reviews, exclusive news, and tips from seasoned players, we aim to create a one-stop destination for everything gaming. From strategic gameplay to epic RPGs and heart-pounding action, Game Hub is here to fuel your passion for gaming.</p>
+
+  <p>But Game Hub is more than just articles. Our team is composed of passionate gamers, developers, and content creators who understand what makes gaming special. Together, we are dedicated to bringing you the best experience possible.</p>
+
+  <div class="team-section">
+    <h3>Meet Our Team</h3>
+    <p>Our team members come from all walks of life, but we all share a common love for gaming. Meet the faces behind Game Hub:</p>
+    <div class="team">
+      <div class="team-member">
+        <img src="path/to/your-image.jpg" alt="Team Member 1" />
+        <h4>John Doe</h4>
+        <p>Founder & Lead Editor</p>
+        <p>John’s love for gaming started when he first picked up a controller at the age of 6. Since then, he’s been involved in both casual and competitive gaming, always pushing for excellence in everything he does.</p>
+      </div>
+      <div class="team-member">
+        <img src="path/to/your-image.jpg" alt="Team Member 2" />
+        <h4>Jane Smith</h4>
+        <p>Content Creator & Reviewer</p>
+        <p>Jane has been a professional gamer and reviewer for over 10 years. Her expertise spans from RPGs to shooters, and her passion for sharing tips and honest reviews with the community shines through every article she writes.</p>
+      </div>
+      <div class="team-member">
+        <img src="path/to/your-image.jpg" alt="Team Member 3" />
+        <h4>Alex Turner</h4>
+        <p>Community Manager</p>
+        <p>Alex brings gamers together. As the bridge between Game Hub and its passionate community, Alex focuses on creating a space for players to connect, share experiences, and engage in lively discussions.</p>
+      </div>
     </div>
-    <ul>
-      <li><a href="../HOMEPAGE/index.html">Home</a></li>
-      <li><a href="../STORE PAGE/index.html">Store</a></li>
-      <li><a href="../UPCOMING/index.html">Upcoming</a></li>
-      <li>
-        <a href="About Us/about.html">About Us</a>
-        <span class="nav-text"></span>
-      </li>
-      <li><button onclick="showFeaturedGames()">Check Out Featured Games</button></li>
-    </ul>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Game Hub</h1>
-    <p>Your ultimate destination for the latest news, reviews, and tips in the gaming world. Stay updated with all things gaming.</p>
-  </section>
-
-  <!-- About Content -->
-  <section class="about">
-    <h2>About Game Hub</h2>
-    <p>Game Hub is your go-to platform for everything gaming. Whether you're into casual gaming, eSports, or the latest AAA titles, we've got something for everyone! We provide top-notch reviews, in-depth news, and expert tips to enhance your gaming experience.</p>
-    <p>Our team consists of passionate gamers and tech enthusiasts who are dedicated to keeping you informed and entertained. Join our community and stay ahead in the world of gaming!</p>
-  </section>
-
-  <!-- Game Categories -->
-  <section class="game-categories">
-    <h2>Explore Game Categories</h2>
-    <div class="categories">
-      <div class="category">
-        <h3>Action Games</h3>
-        <p>From fast-paced combat to thrilling adventure, action games keep you on the edge of your seat!</p>
-      </div>
-      <div class="category">
-        <h3>Strategy Games</h3>
-        <p>Put your brain to the test with strategy games that require careful planning and execution.</p>
-      </div>
-      <div class="category">
-        <h3>RPG Games</h3>
-        <p>Immerse yourself in epic quests and character-driven narratives in the best RPG games.</p>
-      </div>
+<!-- Game Categories -->
+<section class="game-categories">
+  <h2>Explore Game Categories</h2>
+  <div class="categories">
+    <div class="category">
+      <h3>Action Games</h3>
+      <p>From fast-paced combat to thrilling adventure, action games keep you on the edge of your seat!</p>
     </div>
-  </section>
+    <div class="category">
+      <h3>Strategy Games</h3>
+      <p>Put your brain to the test with strategy games that require careful planning and execution.</p>
+    </div>
+    <div class="category">
+      <h3>RPG Games</h3>
+      <p>Immerse yourself in epic quests and character-driven narratives in the best RPG games.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Game Hub. All rights reserved.</p>
-  </footer>
+<!-- Interactive Features -->
+<section class="interactive">
+  <h2>Join the Game Hub Community</h2>
+  <p>We don’t just want you to be a visitor. We want you to be a part of the Game Hub community! Share your thoughts, game tips, and experiences in our active forums, participate in community events, and stay updated with the latest trends in gaming.</p>
+  <button class="join-button">Join the Forum</button>
+  <button class="newsletter-button">Subscribe to Newsletter</button>
+</section>
 
-  <script src="main.js"></script>
-</body>
-</html>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Game Hub. All rights reserved.</p>
+</footer>
