@@ -26,7 +26,7 @@ nav > ul > li > a {
 
 body {
   min-height: 100vh;
- 
+  background-color: #1a1a2f;
 }
 
 /* MAIN MENU */
@@ -186,6 +186,31 @@ body {
 .like-button button.clicked {
     animation: pulse 0.4s ease;
 }
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+#gameButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+}
+
+#gameButton:hover {
+    background-color: #ffaa00;
+}
+
+#message{
+  width: 600px;
+  height: 600px;
+  color: white;
+}
+
 
 @keyframes pulse {
     0% { transform: scale(1); }

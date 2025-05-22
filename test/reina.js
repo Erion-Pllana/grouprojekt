@@ -4,11 +4,17 @@
         review.style.border = '2px solid #cc00ff';
     }
 
-    function playFart() {
-      const sound = document.getElementById('fartSound');
-      sound.currentTime = 0; // rewind to start
+    const button = document.getElementById("gameButton");
+    const message = document.getElementById("message");
+    const sound = document.getElementById("gameSound");
+
+    button.addEventListener("click", () => {
+      sound.currentTime = 0; // Rewind to start
       sound.play();
+      message.textContent = "Bang!";
     }
+    )
+
 
 
 function likeGame(button) {

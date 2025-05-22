@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rein S(Z)emrushi</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reina.css">
 
     <!-- logoja ntab  -->
     <link rel="shortcut icon" href="../IMG/images-removebg-preview (2).png" type="image/x-icon">
@@ -29,16 +29,13 @@
 
 
 </head>
- 
 <body>
 
   
        <!-- sidebar menu -->
 
-    <script src="../HOMEPAGE/script.js"></script>
-    
-    <!-- Navbar -->
-  <nav class="main-menu">
+    <!-- side bari eshte i bere me opsionin hover kur me klikimin e tij dalin opsionet te caktuara  -->
+    <nav class="main-menu">
       <ul>
         <li>
           <a href="../HOMEPAGE/index.html">
@@ -65,9 +62,15 @@
 
 
         <li>
+<<<<<<< HEAD
           <a href="../test/reina.html">
             <i class="fa fa-heart nav-icon"></i>
             <span class="nav-text">Reina</span>
+=======
+          <a href="../About Us/about.html">
+            <i class="fa fa-address-book nav-icon"></i>
+            <span class="nav-text">About Us</span>
+>>>>>>> d607bdc7988f2459b0f4ccbbba005c8847122b0f
           </a>
         </li>
 
@@ -87,7 +90,8 @@
           <a href="../LOGOUT/index.html">
             <i class="fa fa-right-from-bracket nav-icon"></i>
             <span class="nav-text">
-Sign In</span>
+              Sign In
+            </span>
           </a>
         </li>  
       </ul>
@@ -174,13 +178,15 @@ Sign In</span>
     </table>
     <button onclick="highlight(this)">Highlight</button>
 
-  <button onclick="playFart()">💨 Click for Fart</button>
-
-  <audio id="fartSound" src="https://www.youtube.com/watch?v=ZKacHpM8yTc"></audio>
+    <button id="gameButton">Click Me!</button>
+    <p id="message"></p>
+    <audio id="gameSound" src="gun-shots-230534.mp3"></audio>
 
     <div class="like-button">
     <button onclick="likeGame(this)">❤️ Like (<span class="like-count">0</span>)</button>
     </div>
+
+        <script src="reina.js"></script>
 </div>
 </div>
 </body>
