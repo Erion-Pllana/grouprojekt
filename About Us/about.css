@@ -76,7 +76,7 @@ a {
 /* Hero Section */
 .hero {
   text-align: center;
-  background-image: linear-gradient(45deg, #32CD32, #228B22);  /* Vibrant Green Gradient */
+  background-image: linear-gradient(45deg, #32CD32, #228B22);  
   color: white;
   padding: 100px 20px;
   border-radius: 10px;
@@ -106,7 +106,7 @@ a {
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #32CD32;  /* Vibrant Green */
+  color: #32CD32;  
   text-transform: uppercase;
   letter-spacing: 2px;
 }
