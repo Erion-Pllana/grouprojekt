@@ -1660,3 +1660,26 @@ body{
   font-weight: 700;
   z-index: -1;
 }
+
+.my-button {
+  display: block;
+  margin: 0 auto;        /* centers horizontally */
+  position: fixed;
+  bottom: 20px;          /* distance from bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  border: 2px solid darkgreen;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.my-button:hover {
+  box-shadow: 0 0 10px 3px #006400; /* glowing dark green */
+}
+

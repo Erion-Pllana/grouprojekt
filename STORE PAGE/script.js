@@ -28,10 +28,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
-
-
-  
-  function search_animal() {
+function search_animal() {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
     let x = document.getElementsByClassName('animals');
@@ -45,3 +42,12 @@ var swiper = new Swiper(".mySwiper", {
       }
     }
   }
+
+(function($) {
+  $(document).ready(function() {
+    $('.my-button').on('click', function() {
+      alert('You clicked: ' + $(this).text());
+    });
+  });
+})(jQuery);
+
